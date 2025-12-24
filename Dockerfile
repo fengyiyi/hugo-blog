@@ -13,7 +13,7 @@ FROM nginx:1.25-alpine
 # 复制构建好的静态文件到Nginx默认根目录
 COPY --from=builder /app/public /usr/share/nginx/html
 # 可选：自定义Nginx配置（如开启gzip、设置缓存）
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 # 暴露80端口（Northflank需映射此端口）
 EXPOSE 80
 # 启动Nginx前台运行（容器必须保持前台进程）
