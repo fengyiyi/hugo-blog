@@ -1,5 +1,5 @@
 # 阶段1：使用Hugo官方镜像构建静态文件
-FROM klakegg/hugo:0.123.8-alpine AS builder
+FROM klakegg/hugo:0.101.0-alpine AS builder
 # 设置工作目录
 WORKDIR /app
 # 复制Hugo项目所有文件（需确保.gitignore未排除关键文件如content、themes）
